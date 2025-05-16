@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Quiz - Quiz Master</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/quiz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Quiz<span>Master</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="#" id="user-menu">
+                        <span id="user-name">User</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="profile.html">Profile</a></li>
+                            <li><a href="#" id="logout-btn">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Quiz Container -->
+    <section id="quiz-container" class="quiz-container">
+        <div class="container">
+            <div class="quiz-header">
+                <h2 id="quiz-title">Quiz Title</h2>
+                <div class="quiz-info">
+                    <span id="current-question">Question 1 of 10</span>
+                    <span id="timer"><i class="fas fa-clock"></i> <span id="time-left">10:00</span></span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" id="quiz-progress"></div>
+                </div>
+            </div>
+            <div class="quiz-content">
+                <div id="question-container">
+                    <h3 id="question-text">Question text goes here?</h3>
+                    <div class="options-container" id="options-container">
+                        <!-- Options will be inserted here by JavaScript -->
+                    </div>
+                </div>
+                <div id="feedback-container" class="hidden">
+                    <div id="feedback-content"></div>
+                </div>
+            </div>
+            <div class="quiz-footer">
+                <button id="next-btn" class="btn btn-primary" disabled>Next Question</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Container (Hidden by default) -->
+    <section id="results-container" class="results-container hidden">
+        <div class="container">
+            <div class="results-header">
+                <h2>Quiz Results</h2>
+                <p id="results-summary">You scored 0 out of 10</p>
+            </div>
+            <div class="results-content">
+                <div class="score-circle">
+                    <div class="score-percent" id="score-percent">0%</div>
+                    <div class="score-label">Correct Answers</div>
+                </div>
+                <div class="results-details">
+                    <h3>Question Summary:</h3>
+                    <div id="question-summary">
+                        <!-- Question summary will be inserted here by JavaScript -->
+                    </div>
+                </div>
+            </div>
+            <div class="results-footer">
+                <button id="retry-btn" class="btn btn-primary">Try Again</button>
+                <button id="home-btn" class="btn btn-outline">Back to Dashboard</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Quiz<span>Master</span></h2>
+                    <p>Test your knowledge, challenge your friends</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#categories">Categories</a></li>
+                        <li><a href="index.html#featured">Featured Quizzes</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Stay Updated</h3>
+                    <p>Subscribe to our newsletter for new quizzes and features</p>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 QuizMaster. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/quiz.js"></script>
+</body>
+</html>
+

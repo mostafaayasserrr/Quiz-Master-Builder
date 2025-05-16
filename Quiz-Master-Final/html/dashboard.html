@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Quiz Master</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Quiz<span>Master</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                    <li><a href="create-quiz.html">Create Quiz</a></li>
+                    <li><a href="#" id="user-menu">
+                        <span id="user-name">User</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="profile.html">Profile</a></li>
+                            <li><a href="#" id="logout-btn">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Dashboard Section -->
+    <section class="dashboard-section">
+        <div class="container">
+            <div class="dashboard-header">
+                <h2>Welcome, <span id="dashboard-user-name">User</span>!</h2>
+                <p>Manage your quizzes and track your progress</p>
+            </div>
+            
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="quizzes-taken">0</h3>
+                        <p>Quizzes Taken</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="avg-score">0%</h3>
+                        <p>Average Score</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-pencil-alt"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="quizzes-created">0</h3>
+                        <p>Quizzes Created</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dashboard-tabs">
+                <button class="tab-btn active" data-tab="my-quizzes">My Quizzes</button>
+                <button class="tab-btn" data-tab="history">Quiz History</button>
+                <button class="tab-btn" data-tab="favorites">Favorites</button>
+            </div>
+            
+            <div class="dashboard-content">
+                <!-- My Quizzes Tab -->
+                <div class="tab-content active" id="my-quizzes-tab">
+                    <div class="tab-header">
+                        <h3>My Quizzes</h3>
+                        <a href="create-quiz.html" class="btn btn-primary">Create New Quiz</a>
+                    </div>
+                    <div class="quiz-grid" id="my-quizzes-grid">
+                        <!-- User's quizzes will be displayed here -->
+                    </div>
+                </div>
+                
+                <!-- Quiz History Tab -->
+                <div class="tab-content" id="history-tab">
+                    <div class="tab-header">
+                        <h3>Quiz History</h3>
+                    </div>
+                    <div class="history-list" id="history-list">
+                        <!-- Quiz history will be displayed here -->
+                    </div>
+                </div>
+                
+                <!-- Favorites Tab -->
+                <div class="tab-content" id="favorites-tab">
+                    <div class="tab-header">
+                        <h3>Favorite Quizzes</h3>
+                    </div>
+                    <div class="quiz-grid" id="favorites-grid">
+                        <!-- Favorite quizzes will be displayed here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Quiz<span>Master</span></h2>
+                    <p>Test your knowledge, challenge your friends</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#categories">Categories</a></li>
+                        <li><a href="index.html#featured">Featured Quizzes</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Stay Updated</h3>
+                    <p>Subscribe to our newsletter for new quizzes and features</p>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 QuizMaster. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>
+
